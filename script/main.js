@@ -35,19 +35,12 @@ const projectDetails = [
 
 // Dynamically create and append the video element
 document.addEventListener('DOMContentLoaded', function () {
-    let videoElement = document.createElement('video');
-    videoElement.autoplay = true;
-    videoElement.muted = true;
-    videoElement.loop = true;
-    videoElement.id = 'myVideo';
-
-    let videoSource = document.createElement('source');
-    videoSource.src = './file/video.mp4';
-    videoSource.type = 'video/mp4';
-
-    videoElement.appendChild(videoSource);
-    document.body.appendChild(videoElement);
+    document.body.style.backgroundImage = 'url(./file/img_8.png)'; // Change to the path of your picture file
+    document.body.style.backgroundSize = 'cover'; // Optional: cover the entire background
+    document.body.style.backgroundPosition = 'center'; // Optional: center the background
+    document.body.style.backgroundRepeat = 'no-repeat'; // Optional: prevent background repetition
 });
+
 
 // Function to generate a project card
 function createProjectCard(project) {
