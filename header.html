@@ -1,32 +1,128 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html"> INFT 2202</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html"><i class="fa-solid fa-cart-shopping"></i>Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html"><i class="fa-solid fa-address-card"></i>About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="service.html"><i class="fa-regular fa-map"></i>Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="contact.html"><i class="fa-solid fa-phone"></i>Contact Us</a>
-                </li>
-                <li id = "login" class="nav-item">
-                    <a class="nav-link active" href="login.html"><i class="fas fa-sign-in-alt "></i>Login</a>
-                </li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maryam Heidary, Masooma Haidari">
+    <title>Header</title>
+    <link rel="stylesheet" href="./content/style.css">
+</head>
+<body>
+<header id="headerPlaceholder">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Harmony Hub</a>
 
-            </ul>
-
+            <form id="searchForm" class="d-flex">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <!-- Navigation Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="weather.html">Weather</a>
+                    </li>
+                    <li class="nav-item" id="loginItem">
+                        <a id="loginLink" class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
+</header>
+<script>
+
+    $(document).ready(function() {
+        // Get the current page filename
+        let currentPage = location.pathname.split("/").pop();
+
+        // Find the corresponding navigation item and make it bold
+        $("header nav ul.navbar-nav li").each(function() {
+            let navItemLink = $(this).find("a").attr("href");
+            if (navItemLink === currentPage || navItemLink === "./" + currentPage) {
+                $(this).addClass("active");
+                $(this).find("a").addClass("active");
+            }
+        });
+    });
+</script>
+<!--
+    File: header.html
+    Author: Maryam Heidary (100868524), Masooma Haidari (100868525)
+    Description: Index of the Harmony Hub website showcasing community engagement, personal development, and connections.
+    Date: 2024/27/01
+-->
+<script>
+
+    // Update the text content of the element with the ID "blogLink" to "News"
+    const blogLink = document.getElementById("blogLink");
+    if (blogLink) {
+        blogLink.textContent = "News";
+
+        // Update the href attribute to point to "blog.html"
+        blogLink.href = "blog.html";
+    }
+
+    $(document).ready(function () {
+        // Event listener for form submission
+        $('#searchForm').on('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the search query from the input field
+            let query = $('#searchInput').val();
+
+            // Perform search action
+            handleSearch(query);
+        });
+
+        // Function to handle search
+        function handleSearch(query) {
+            // Make an AJAX request to fetch JSON data
+            $.getJSON('./data/search.json', function (jsonData) {
+                // Search in JSON data
+                let result = jsonData.find(function (item) {
+                    return item.description.toLowerCase().includes(query.toLowerCase());
+                });
+
+                // If a match is found, redirect to the corresponding URL
+                if (result) {
+                    window.location.href = result.url;
+                } else {
+                    // Handle case when no match is found
+                    alert('No results found');
+                }
+            });
+        }
+    });
+</script>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>

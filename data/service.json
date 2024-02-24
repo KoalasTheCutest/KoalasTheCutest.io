@@ -1,0 +1,20 @@
+[
+  {
+    "id": "service1",
+    "title": "Career Exploration Counseling",
+    "description": "Navigate your career path with confidence through our Career Exploration Counseling service. Our experienced counselors are here to guide you on a journey of self-discovery and professional growth. Our personalized counseling sessions are tailored to your individual needs and aspirations. Whether you're a recent graduate exploring career options or a seasoned professional seeking a new direction, our counselors provide valuable insights and support to help you make informed decisions about your career. Through a series of assessments, discussions, and exercises, our counselors help you identify your strengths, interests, and goals. We explore various career paths, industries, and opportunities to find the best fit for your skills and passions.",
+    "image": "./file/img_5.png"
+  },
+  {
+    "id": "service2",
+    "title": "Music Learning Classes",
+    "description": "Embark on a musical journey with our Music Learning Classes service. Whether you're a beginner or an experienced musician, our classes cater to all skill levels and interests. Our expert instructors provide comprehensive lessons covering various musical instruments, genres, and styles. From piano and guitar to violin and drums, explore your passion for music in a supportive and enriching environment. Discover the joy of playing music and express yourself through melodies and harmonies. Our classes focus not only on technical skills but also on creativity, expression, and musical interpretation.",
+    "image": "./file/img_6.png"
+  },
+  {
+    "id": "service3",
+    "title": "Community Social Network",
+    "description": "Engage with your community through our Community Social Network service. Connect with like-minded individuals, share experiences, and collaborate on projects that make a difference. Our social network platform provides a safe and inclusive space where members can participate in discussions, join groups, and organize events. Foster meaningful relationships and contribute to a vibrant and supportive community environment.",
+    "image": "./file/img_7.png"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Event",
+    "url": "events.html",
+    "description": "Join us for a fun-filled BBQ party with delicious food, music, games, and activities for the whole family. Let's celebrate our community spirit!,Neighborhood BBQ Party,Learn how to start your own community garden and grow fresh produce in your neighborhood. Experienced gardeners will provide tips and guidance.Community Cleanup Day, Join us for a day of cleaning up our neighborhood parks and streets. Let's work together to keep our community clean and beautiful!"
+  },
+  {
+    "title": "blog",
+    "url": "blog.html",
+    "description": "Join Our Program: Experience Inclusivity with Language Translators, Embrace a community that values diversity and inclusivity at its core. As part of our commitment to fostering meaningful connections, we proudly offer language translator services within our program, Discovering Harmony: Your Guide to Our Community Center ServicesWelcome to Harmony Hub, your community center hub for diverse and enriching services! Whether you're a longtime member or a newcomer, this guide will help you explore and make the most of our community offerings.Community Connection: Harmony Hub Tips for Your Community Center Discover insider tips and tricks to foster community engagement with Harmony Hub in your community center. From organizing events to enhancing communication, make the most out of Harmony Hub's features and elevate the community experience"
+  },
+  {
+    "title": "service",
+    "url": "service.html",
+    "description": "Career Exploration Counseling, Navigate your career path with confidence through our Career Exploration Counseling service. Our experienced counselors are here to guide you on a journey of self-discovery and professional growth.,Music Learning Classes ,                Embark on a musical journey with our Music Learning Classes service. Whether you're a beginner or an experienced musician, our classes cater to all skill levels and interests.Community Social Network, Community Social Network,                 Engage with your community through our Community Social Network service. Connect with like-minded individuals, share experiences, and collaborate on projects that make a difference."
+  },
+  {
+    "title": "portfolio",
+    "url": "portfolio.html",
+    "description": "Community Learning Platform,Project Description: Developed an online learning platform for the community hub, offering a variety of classes, workshops, and educational resources for people of all ages and backgrounds.Key Technologies Used: React, Node.js, MongoDB, WebRTC Role: Full Stack Developer, Volunteer Management System Project Description: Created a volunteer management system to streamline the process of organizing and coordinating community events, projects, and activities with the help of dedicated volunteers.\n\nKey Technologies Used: Django, PostgreSQL, Bootstrap, AWS\n\nRole: Backend Developer"
+  }
+]

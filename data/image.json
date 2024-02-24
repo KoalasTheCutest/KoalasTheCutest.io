@@ -1,0 +1,55 @@
+{
+  "images": [
+    {
+      "src": "./image/img.png",
+      "alt": "Swimming Pool",
+      "data-lightbox": "gallery",
+      "data-title": "Swimming Pool",
+      "caption": "Dive into the refreshing waters of our community swimming pool and experience a rejuvenating escape from the summer heat."
+
+    },
+    {
+      "src": "./image/img_1.png",
+      "alt": "Camping each Saturday",
+      "data-lightbox": "gallery",
+      "data-title": "Camping each Saturday",
+      "caption": "Explore the thrilling world of vampires and immerse yourself in the mysterious allure of the night.",
+
+      "width": "500",
+      "height": "300"
+    },
+    {
+      "src": "./image/img_2.png",
+      "alt": "Community Event 3",
+      "data-lightbox": "gallery",
+      "data-title": "Camping each Summer",
+      "caption": "Explore the thrilling world of vampires and immerse yourself in the mysterious allure of the night",
+      "width": "500",
+      "height": "300"
+    },
+    {
+      "src": "./image/img_3.png",
+      "alt": "Playing Time",
+      "data-lightbox": "gallery",
+      "data-title": "Playing Time",
+      "caption": "Let your kids unleash their imagination and creativity in a safe and fun-filled indoor play area."
+
+    },
+    {
+      "src": "./image/img_4.png",
+      "alt": "Community Event 3",
+      "data-lightbox": "gallery",
+      "data-title": "Gaming Time",
+      "caption": "Challenge your friends to a strategic game of chess or enjoy a variety of other board games in our gaming area."
+
+    },
+    {
+      "src": "./image/img_5.png",
+      "alt": "Community Event 3",
+      "data-lightbox": "gallery",
+      "data-title": "Challenge Yourself",
+      "caption": "Challenge your friends to a strategic game of chess or enjoy a variety of other board games in our gaming area."
+    }
+  ]
+}
+

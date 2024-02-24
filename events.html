@@ -1,0 +1,45 @@
+<!--
+    File: index.html
+    Author: Maryam Heidary (100868524), Masooma Haidari (100868525)
+    Description: Events page of the Harmony Hub website showcasing community engagement, personal development, and connections.
+    Date: 2024/02/24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maryam Heidary, Masooma Haidari">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./content/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<header>
+
+</header>
+
+<main class="container">
+    <h1 class="mb-5">
+        <i class="fa-solid fa-home"></i>
+        Welcome to Harmony Hub Community Center
+    </h1>
+
+    <div id="event-list" class="row">
+        <!-- Events will be dynamically populated here -->
+    </div>
+</main>
+
+<!-- JavaScript Imports -->
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="script/main.js"></script>
+<script>
+    $(document).ready(function() {
+        fetchEventData(); // Call the function to fetch and display events
+    });
+</script>
+</body>
+</html>

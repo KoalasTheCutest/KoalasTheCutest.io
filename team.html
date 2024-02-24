@@ -1,0 +1,88 @@
+<!--
+    File: team.html
+    Author: Maryam Heidary (100868524), Masooma Haidari (100868525)
+    Description: Team page of the Harmony Hub website showcasing community engagement, personal development, and connections.
+    Date: 2024/27/01
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maryam Heidary, Masooma Haidari">
+
+    <title>Our Team</title>
+    <link rel="stylesheet" href="./content/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+
+
+</head>
+<body>
+
+<header>
+
+</header>
+
+<main class="container">
+    <h1 class="mb-5">
+        <i class="fa-solid fa-users"></i>
+        Our Team
+    </h1>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="team-member" data-bs-toggle="modal" data-bs-target="#team-modal" onclick="showMemberDetails('Maryam Heidary', 'Student - Computer Programming and Analysis', 'maryam.jpg', 'Maryam Heidary is a student in the fourth semester of Computer Programming and Analysis. Student Number: 100868524.')">
+                <img src="./file/maryam.jpg" alt="Maryam Heidary" style="max-width: 200px; max-height: 200px;">
+                <h3>Maryam Heidary</h3>
+                <p>Student - Computer Programming and Analysis</p>
+            </div>
+        </div>
+
+
+    <div class="col-md-4">
+        <div class="team-member" data-bs-toggle="modal" data-bs-target="#team-modal" onclick="showMemberDetails('Masoom Haidari', 'Student - Computer Programming and Analysis', 'masooma.jpg', 'Masoom Haidari is a student in the fourth semester of Computer Programming and Analysis. Student Number: 100868525.')">
+            <img src="./file/masooma.jpg" alt="Masoom Haidari" style="max-width:200px; max-height: 200px;">
+            <h3>Masoom Haidari</h3>
+            <p>Student - Computer Programming and Analysis</p>
+        </div>
+        </div>
+    </div>
+
+
+</main>
+
+<!-- Team Member Modal -->
+<div class="modal fade" id="team-modal" tabindex="-1" aria-labelledby="team-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="team-modal-label">Team Member Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-member-image" src="" alt="">
+                <h3 id="modal-member-name"></h3>
+                <p id="modal-member-role"></p>
+                <p id="modal-member-description"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="script/main.js"></script>
+
+<script>
+    function showMemberDetails(name, role, imageSrc, description) {
+        document.getElementById('modal-member-name').innerText = name;
+        document.getElementById('modal-member-role').innerText = role;
+        document.getElementById('modal-member-image').src = imageSrc;
+        document.getElementById('modal-member-description').innerText = description;
+    }
+</script>
+
+</body>
+</html>

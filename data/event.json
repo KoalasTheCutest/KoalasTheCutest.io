@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Community Cleanup Day",
+      "description": "Join us for a day of cleaning up our neighborhood parks and streets. Let's work together to keep our community clean and beautiful!",
+      "date": "2024-03-15",
+      "time": "10:00 AM",
+      "location": "Central Park"
+
+    },
+    {
+      "id": 2,
+      "title": "Community Garden Workshop",
+      "description": "Learn how to start your own community garden and grow fresh produce in your neighborhood. Experienced gardeners will provide tips and guidance.",
+      "date": "2024-04-05",
+      "time": "2:00 PM",
+      "location": "Community Center"
+
+    },
+    {
+      "id": 3,
+      "title": "Neighborhood BBQ Party",
+      "description": "Join us for a fun-filled BBQ party with delicious food, music, games, and activities for the whole family. Let's celebrate our community spirit!",
+      "date": "2024-05-20",
+      "time": "4:00 PM",
+      "location": "Jones Park"
+
+    }
+  ]
+}
