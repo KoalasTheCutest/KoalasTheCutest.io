@@ -1,0 +1,46 @@
+<!--
+    File: register.html
+    Author: Maryam Heidary (100868524), Masooma Haidari (100868525)
+    Description: Register page of the Harmony Hub website showcasing community engagement, personal development, and connections.
+    Date: 2024/02/24
+-->
+
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 col-sm-12">
+            <div class="registration">
+                <h1 class="display-4">User Registration</h1> <!-- Title for registration -->
+                <form id="registrationForm" action="#" method="post">
+                    <!-- Display Name -->
+                    <div class="form-group">
+                        <label for="displayName">Display Name:</label> <!-- Label for display name input -->
+                        <input type="text" class="form-control" id="displayName" name="displayName" required placeholder="Display Name"> <!-- Input for display name -->
+                        <div class="invalid-feedback"></div> <!-- Feedback for invalid input -->
+                    </div>
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address:</label> <!-- Label for email input -->
+                        <input type="email" class="form-control" id="emailAddress" name="emailAddress" required placeholder="Email Address"> <!-- Input for email -->
+                        <div class="invalid-feedback"></div> <!-- Feedback for invalid input -->
+                    </div>
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label> <!-- Label for phone number input -->
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required placeholder="Phone Number"> <!-- Input for phone number -->
+                        <div class="invalid-feedback"></div> <!-- Feedback for invalid input -->
+                    </div>
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="address">Address:</label> <!-- Label for address input -->
+                        <input type="text" class="form-control" id="address" name="address" required placeholder="Address"> <!-- Input for address -->
+                        <div class="invalid-feedback"></div> <!-- Feedback for invalid input -->
+                    </div>
+
+                    ...
+                    <button type="button" id="registerButton" class="btn btn-primary">Register</button> <!-- Register button -->
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

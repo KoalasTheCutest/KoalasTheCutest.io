@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Community Learning Platform",
+    "description": "Developed an online learning platform for the community hub, offering a variety of classes, workshops, and educational resources for people of all ages and backgrounds.",
+    "technologies": "React, Node.js, MongoDB, WebRTC",
+    "role": "Full Stack Developer",
+    "image": "./file/img_3.png"
+  },
+  {
+    "title": "Volunteer Management System",
+    "description": "Created a volunteer management system to streamline the process of organizing and coordinating community events, projects, and activities with the help of dedicated volunteers.",
+    "technologies": "Django, PostgreSQL, Bootstrap, AWS",
+    "role": "Backend Developer",
+    "image": "./file/img_4.png"
+  },
+  {
+    "title": "Community Social Network",
+    "description": "Designed and implemented a social networking platform for the community hub, fostering communication, collaboration, and the sharing of ideas among community members.",
+    "technologies": "Vue.js, Firebase, Real-time Database, Authentication",
+    "role": "Frontend Developer",
+    "image": "./file/img_3.png"
+  }
+]

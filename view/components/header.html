@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maryam Heidary, Masooma Haidari">
+    <title>Header</title>
+    <link rel="stylesheet" href="../../content/style.css">
+    <!-- scripts -->
+    <script src="../../script/router.js"></script>
+</head>
+<body>
+<header id="headerPlaceholder">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" data="index">Harmony Hub</a>
+
+            <form id="searchForm" class="d-flex">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+                <button id="searchButton" class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <!-- Navigation Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" data="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data="portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data="service">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data="team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data="gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data="events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data="weather">Weather</a>
+                    </li>
+                    <li class="nav-item" id="loginItem">
+                        <a id="loginLink" class="nav-link" data="login">Login</a>
+                    </li>
+                    <li id="statisticsLink" class="nav-item" style="display: none;">
+                        <a class="nav-link" data="statistics">Statistics</a>
+                    </li>
+                    <li id="PlanningLink" class="nav-item" style="display: none;">
+                        <a class="nav-link" data="events-planning">Planning</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" data="blog">News</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--
+    File: header.html
+    Author: Maryam Heidary (100868524), Masooma Haidari (100868525)
+    Description: Index of the Harmony Hub website showcasing community engagement, personal development, and connections.
+    Date: 2024/27/01
+-->
+
+<script>
+
+
+
+    $(document).ready(function () {
+        // Event listener for form submission
+        $('#searchForm').on('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the search query from the input field
+            let query = $('#searchInput').val();
+
+            // Perform search action
+            handleSearch(query);
+        });
+
+        // Function to handle search
+        function handleSearch(query) {
+            // Make an AJAX request to fetch JSON data
+            $.getJSON('../../data/search.json', function (jsonData) {
+                // Search in JSON data
+                let result = jsonData.find(function (item) {
+                    return item.description.toLowerCase().includes(query.toLowerCase());
+                });
+
+                // If a match is found, redirect to the corresponding URL
+                if (result) {
+                    window.location.href = result.url;
+                } else {
+                    // Handle case when no match is found
+                    alert('No results found');
+                }
+            });
+        }
+    });
+</script>
+
+<!--<script src="../../node_modules/jquery/dist/jquery.min.js"></script>-->
+<!--<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!--<script src="../../script/router.js"></script>-->
+<!--<script src="../../script/main.js"></script>-->
+<!--</body>-->
+<!--</html>-->
