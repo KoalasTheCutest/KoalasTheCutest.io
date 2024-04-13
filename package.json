@@ -1,11 +1,21 @@
 {
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "@fullcalendar/core": "^6.1.11",
     "@fullcalendar/daygrid": "^6.1.11",
     "@types/chart.js": "^2.9.41",
     "@types/jquery": "^3.5.29",
+    "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
-    "chart.js": "^4.4.2"
+    "chart.js": "^4.4.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "@types/fullcalendar": "^3.8.0",

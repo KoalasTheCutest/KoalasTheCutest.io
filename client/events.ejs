@@ -1,0 +1,24 @@
+<%- include('components/header') %>
+
+<main class="container">
+    <h1 class="mb-5">
+        <i class="fa-solid fa-home"></i>
+        Welcome to Harmony Hub Community Center
+    </h1>
+
+    <div id="event-list" class="row">
+        <% events.forEach(function(event) { %>
+            <div class="event-item">
+                <h2><%= event.title %></h2>
+                <p>Date: <%= new Date(event.date).toDateString() %></p>
+                <p>Time: <%= new Date(event.date).toTimeString() %></p>
+                <p>Description: <%= event.description %></p>
+                <% if (event.image) { %>
+                    <img src="<%= event.image %>" alt="<%= event.title %>">
+                <% } %>
+            </div>
+        <% }); %>
+    </div>
+</main>
+
+<%- include('components/footer') %>

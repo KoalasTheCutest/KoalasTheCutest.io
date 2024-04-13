@@ -1,0 +1,65 @@
+<%- include('components/header') %>
+
+    <main class="container">
+        <h1>Weather App</h1>
+        <form id="location-form">
+            <label for="location">Enter Location:</label>
+            <input type="text" id="location" placeholder="Enter your location">
+            <button type="button" onclick="getWeather()">Get Weather</button>
+        </form>
+        <div id="weather-info"></div>
+    </main>
+
+    <script>
+        function getWeather() {
+            console.log('get weather called');
+            const locationElement = document.getElementById('location');
+            if (!locationElement) {
+                console.error('Location input element not found');
+                return;
+            }
+            const location = locationElement.value;
+            const apiKey = '9GrRSOw4pQcNJ7LXvS3ClYDavhOtfJ84';
+            const apiUrl = `https://api.tomorrow.io/v4/timelines?location=${encodeURIComponent(
+                location
+            )}&fields=temperature,weatherCode&timesteps=current&units=metric&apikey=${apiKey}`;
+            console.log('Location Element:', locationElement);
+            console.log('Location Value:', location);
+            fetch(apiUrl)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    if (
+                        !data.data ||
+                        !data.data.timelines ||
+                        !data.data.timelines[0] ||
+                        !data.data.timelines[0].intervals ||
+                        !data.data.timelines[0].intervals[0] ||
+                        !data.data.timelines[0].intervals[0].values ||
+                        !data.data.timelines[0].intervals[0].values.temperature ||
+                        !data.data.timelines[0].intervals[0].values.weatherCode
+                    ) {
+                        throw new Error('Unexpected response format');
+                    }
+                    const currentWeather =
+                        data.data.timelines[0].intervals[0].values.temperature;
+                    const weatherCode =
+                        data.data.timelines[0].intervals[0].values.weatherCode;
+                    const weatherInfo = document.getElementById('weather-info');
+                    if (weatherInfo) {
+                        weatherInfo.innerHTML = `Weather in ${location}: Temperature ${currentWeather}°C, Weather Code ${weatherCode}`;
+                    } else {
+                        console.error('Weather info element not found');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Error fetching weather data:', error);
+                });
+        }
+    </script>
+
+    <%- include('components/footer') %>
