@@ -1,4 +1,4 @@
-let LOCAL = true; // true means i want to run app against local db, false means use remote db
+let LOCAL = false; // true means i want to run app against local db, false means use remote db
 
 let HostName, URI;
 
